@@ -4,6 +4,7 @@ using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
 using System.Collections.Generic;
+using Android.Content;
 
 namespace MeuApp
 {
@@ -18,10 +19,6 @@ namespace MeuApp
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
-
-
-            //Instaciando Elementos do layout
-            ListView pessoas = FindViewById<ListView>(Resource.Id.listView);
 
 
             //preparação para criação de objetos "person" que farão parte da lista "people"
@@ -44,6 +41,47 @@ namespace MeuApp
             
             //redefinição de "newPerson" para criação de novo objeto
             newPerson = new ClassPerson();
+
+
+            newPerson.nome = "Batman";
+            newPerson.img = "https://i1.wp.com/trecobox.com.br/wp-content/uploads/2018/01/Batman-HQ.jpg?fit=1000%2C600&ssl=1";
+            newPerson.desc = "Bruce Wayne ricasso durante o dia, vigilante durante a noite";
+
+            people.Add(newPerson);
+
+            newPerson = new ClassPerson();
+
+        
+
+            newPerson.nome = "Espantalho";
+            newPerson.img = "https://i.pinimg.com/originals/46/e9/03/46e90374a600ce86f56cc543ee231a24.jpg";
+            newPerson.desc = "Espantalho, aquele que despesta os maiores medos dos outros";
+
+            people.Add(newPerson);
+
+            newPerson = new ClassPerson();
+
+
+            AdpPeople adaptador = new AdpPeople(this, people);
+            ListView lista = FindViewById<ListView>(Resource.Id.listView);
+            lista.Adapter = adaptador;
+
+            lista.ItemClick += Pessoas_ItemClick;
+        }
+
+        private void Pessoas_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            string nome     = people[e.Position].nome;
+            string img      = people[e.Position].img;
+            string desc     = people[e.Position].desc;
+
+            var newWindow = new Intent(this, typeof(MainActivity2));
+
+            newWindow.PutExtra("nome", nome);
+            newWindow.PutExtra("img", img);
+            newWindow.PutExtra("desc", desc);
+
+            StartActivity(newWindow);
 
         }
     }

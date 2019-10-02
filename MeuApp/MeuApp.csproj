@@ -59,6 +59,7 @@
     <Compile Include="AdpPeople.cs" />
     <Compile Include="ClassPerson.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MainActivity2.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -98,6 +99,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\layout2.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_main2.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

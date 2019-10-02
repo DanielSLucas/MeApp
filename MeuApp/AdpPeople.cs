@@ -57,15 +57,16 @@ namespace MeuApp
 
             if (linha == null)
             {
-                linha = LayoutInflater.From(contexto).Inflate(Resource.Layout.layout2,null, false);
+                linha = LayoutInflater.From(contexto).Inflate(Resource.Layout.layout2, null, false);
             };
 
             // Buscar os Widgets
-            ListView listItem = linha.FindViewById<ListView>(Resource.Id.listView);
+            TextView name = linha.FindViewById<TextView>(Resource.Id.textView1);
 
-            listItem = itens[position].nome.ToString();
+            name.Text = itens[position].nome.ToString();
 
-           //CONTINUAR DAQUI!!
+            return linha;
+            //CONTINUAR DAQUI!!
         }
     }
 }
