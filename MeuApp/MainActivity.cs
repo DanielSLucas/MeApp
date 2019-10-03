@@ -54,7 +54,7 @@ namespace MeuApp
         
 
             newPerson.nome = "Espantalho";
-            newPerson.img = "https://i.pinimg.com/originals/46/e9/03/46e90374a600ce86f56cc543ee231a24.jpg";
+            newPerson.img = "https://s.aficionados.com.br/imagens/origem.jpg";
             newPerson.desc = "Espantalho, aquele que despesta os maiores medos dos outros";
 
             people.Add(newPerson);

@@ -2558,6 +2558,9 @@ namespace MeuApp
 			// aapt resource value: 0x7f08005f
 			public const int image = 2131230815;
 			
+			// aapt resource value: 0x7f08008c
+			public const int imageView = 2131230860;
+			
 			// aapt resource value: 0x7f0800af
 			public const int info = 2131230895;
 			
@@ -2866,9 +2869,6 @@ namespace MeuApp
 			
 			// aapt resource value: 0x7f0800b6
 			public const int visible = 2131230902;
-			
-			// aapt resource value: 0x7f08008c
-			public const int webView = 2131230860;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;

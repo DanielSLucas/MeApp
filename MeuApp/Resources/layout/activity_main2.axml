@@ -4,16 +4,12 @@
 	android:orientation="vertical"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
-	<android.webkit.WebView
-		android:layout_width="wrap_content"
+	<ImageView
+		android:src="@android:drawable/ic_menu_gallery"
+		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:maxWidth="50dp"
-		android:maxHeight="50dp"
-		android:minWidth="40dp"
-		android:minHeight="40dp"
-		android:id="@+id/webView"
-		android:layout_gravity="center"
-		android:importantForAutofill="no" />
+		android:id="@+id/imageView"
+		android:scaleType="centerCrop" />
 	<LinearLayout
 		android:orientation="horizontal"
 		android:minWidth="25px"
@@ -62,5 +58,6 @@
 			android:id="@+id/textViewDescr"
 			android:padding="10dp" />
 	</LinearLayout>
+
 
 </LinearLayout>
